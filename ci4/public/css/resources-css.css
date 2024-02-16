@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+/* Body */
+
+body {
+  background-image: url("../images/home-bg.png");
+  position: cover;
+  margin: 0;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: url("../images/cursor.webp"), auto;
+}
+
+/* Loading screen */
+
+.loader {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00257F;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader img {
+    display: block;
+    margin: 0 auto;
+}
+
+.loader p {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.disappear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Navigation */
+
+div#waypoints {
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+    width: 100vw;
+    min-width: 100vw;
+    height: 7.8vw;
+    min-height: 9.7;
+    position: sticky;
+    top: 0;
+    padding-bottom: -1vw;
+    z-index: 1000;
+    font-family: Cabriole;
+    font-weight: bold;
+}
+
+div#waypoints img {
+    width: 6vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#waypoints a {
+    Color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    text-align: center;
+}
+
+a#teleportwaypoint {
+    display: flex;
+    flex-direction: column;
+}
+
+div#statueoftheseven img {
+    width: 10vw;
+}
+
+div#statueoftheSeven {
+    float: center;
+    z-index: 4;
+}
+
+img#newstatueoftheseven:hover {
+    width: 12.3vw;
+    cursor: url("../images/hover.webp"), auto;
+}
+
+div#left {
+    float: left;
+    display: flex;
+}
+
+div#left img:hover {
+    width: 7vw;
+    cursor: url("../images/hover.webp"), auto;
+}
+
+div#left p {
+    margin-top: -0.15vw;
+    background-color: #3b719f;
+    border-radius: 25px;
+    text-align: center;
+}
+
+div#left p:hover {
+    cursor: url("../images/hover.webp"), auto;
+}
+
+div#right {
+    float: right;
+    display: flex;
+}
+
+div#right p {
+    margin-top: -0.15vw;
+    background-color: #3b719f;
+    border-radius: 25px;
+}
+
+div#right p:hover {
+    cursor: url("../images/hover.webp"), auto;
+}
+
+div#right img:hover {
+    width: 7vw;
+    cursor: url("../images/hover.webp"), auto;
+}
+
+/* Parallax Scroll */
+
+.parallax {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.parallax>* {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+}
+
+.parallax>img {
+    width: 100%;
+}
+
+.parallax_bg {
+    --parallax-speed: -1;
+    z-index: 1;
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.parallax_furina {
+    --parallax-speed: 3;
+    z-index: 2;
+}
+
+.parallax_adventure {
+    --parallax-speed: 1;
+    z-index: 3;
+}
+
+.parallax_front {
+    z-index: 999;
+    align-self: end;
+}
+
+@keyframes parallax {
+    to {
+        transform:
+            translateY(calc(var(--parallax-speed) * 200px));
+    }
+}
+
+/* Resources */
+
+div#inside {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+div#resources {
+    text-align: center;
+    font-family: Cream;
+    font-size: 1.4vw;
+    background-color: #D4BE7E;
+    width: 55vw;
+    border: 8px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.main-content {
+    position: relative;
+    background: #7D93D6;
+}
+
+.wrapper img {
+    width: 100%;
+}
