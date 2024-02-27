@@ -1,5 +1,5 @@
   <?php
-  echo link_tag('css/home-css.css');
+  echo link_tag('css/steambird-css.css');
 
   $script = [
     'defer' => null,
@@ -10,7 +10,7 @@
   ?>
 
   <audio autoplay loop id="audiobox" style="width:215px;">
-    <source src="audio/home.mp3" type="audio/mpeg">
+    <source src="audio/test.mp3" type="audio/mpeg">
   </audio>
 </head>
 
@@ -79,79 +79,55 @@
     <?php
     $bg = [
       'class' => 'parallax_bg',
-      'src' => 'images/home/parallax/background.png',
+      'src' => 'images/steambird/parallax/steambird.png',
     ];
 
     $front = [
       'class' => 'parallax_front',
-      'src' => 'images/home/parallax/front-parallax.png',
+      'src' => 'images/steambird/parallax/fron.png',
     ];
 
     $adventure = [
       'class' => 'parallax_adventure',
-      'src' => 'images/home/parallax/lets-go-adventure-parallax.png',
+      'src' => 'images/steambird/parallax/message.png',
     ];
 
-    $furina = [
-      'class' => 'parallax_furina',
-      'src' => 'images/home/parallax/furina-parallax.png',
-    ];
-
-    $mc = [
-      'class' => 'parallax_mc',
-      'src' => 'images/home/parallax/mc-parallax.png',
-    ];
-
-    $sc = [
-      'class' => 'parallax_sc',
-      'src' => 'images/home/parallax/sc-parallax.png',
-    ];
-
-    $gu = [
-      'class' => 'parallax_gu',
-      'src' => 'images/home/parallax/gu-parallax.png',
+    $charlotte = [
+      'class' => 'parallax_charlotte',
+      'src' => 'images/steambird/parallax/charlotte.png',
     ];
 
     echo img($bg);
     echo img($front);
     echo img($adventure);
-    echo img($furina);
-    echo img($mc);
-    echo img($sc);
-    echo img($gu);
+    echo img($charlotte);
     ?>
+
   </div>
-<!--Main Content-->
+
   <div class="main-content">
     <div class="wrapper">
-      <div class="pic">
-        <?php
-        $cio = [
-          'src' => 'images/home/maincontent/checkitout.png',
-        ];
-    
-        $profile = [
-          'src' => 'images/home/maincontent/profile.png',
-        ];
-    
-        $interests = [
-          'src' => 'images/home/maincontent/interests.png',
-        ];
-    
-        $steambird = [
-          'src' => 'images/home/maincontent/steambird.png',
-        ];
-    
-        $resources = [
-          'src' => 'images/home/maincontent/resources.png',
-        ];
+<?= esc($title) ?>
 
-        echo img($cio);
-        echo img($profile);
-        echo img($interests);
-        echo img($steambird);
-        echo img($resources);
-        ?>
-      </div>
-    </div>
-  </div>
+<?php if (! empty($news) && is_array($news)): ?>
+
+    <?php foreach ($news as $news_item): ?>
+
+        <h3><?= esc($news_item['title']) ?></h3>
+
+        <div class="main">
+            <?= esc($news_item['body']) ?>
+        </div>
+        <p><a href="./news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
+
+    <?php endforeach ?>
+
+<?php else: ?>
+
+    <h3>No News</h3>
+
+    <p>Unable to find any news for you.</p>
+
+<?php endif ?>
+</div>
+</div>

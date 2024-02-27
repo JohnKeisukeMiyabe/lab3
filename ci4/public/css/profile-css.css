@@ -104,7 +104,6 @@ body {
     }
 }
 
-
 /* Navigation */
 
 div#waypoints {
@@ -256,4 +255,4 @@ div#right img:hover {
     display: flex;
     justify-content: center;
     position: relative;
-  }
+}
