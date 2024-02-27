@@ -66,7 +66,7 @@
         </a>
       </div>
       <div id="right">
-        <a id="teleportwaypoint" href="news/">
+        <a id="teleportwaypoint" href="news">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
