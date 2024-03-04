@@ -7,7 +7,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Hi melody", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -69,7 +69,6 @@ div#waypoints {
     top: 0;
     padding-bottom: -1vw;
     z-index: 1000;
-    font-family: Cabriole;
     font-weight: bold;
 }
 
@@ -119,7 +118,7 @@ div#left img:hover {
 
 div#left p {
     margin-top: -0.15vw;
-    background-color: #3b719f;
+    background-color: #7E94D6;
     border-radius: 25px;
     text-align: center;
 }
@@ -135,7 +134,7 @@ div#right {
 
 div#right p {
     margin-top: -0.15vw;
-    background-color: #3b719f;
+    background-color: #7E94D6;
     border-radius: 25px;
 }
 

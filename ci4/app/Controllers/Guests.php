@@ -7,37 +7,41 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Guests extends BaseController
 {
-    public function index() {
-    $model = model(GuestModel::class);
+    public function index()
+    {
+        $model = model(GuestModel::class);
 
-    $data = [
-        'guest' => $model->getGuest(),
-        'title' => 'Guest List',
-    ];
+        
+        $data = [
+            'guests'  => $model->getGuests(),
+            'title' => 'Guest List',
+        ];
 
-    return view('templates/guestheader', $data)
-        . view('guests/index')
-        . view('templates/guestfooter');
-}
+        return view('templates/guestheader', $data)
+            . view('guests/index')
+            . view('templates/guestfooter');		
+
+
+    }
 
     public function show($email = null)
     {
-    $model = model(GuestModel::class);
+        $model = model(GuestModel::class);
 
-    $data['guest'] = $model->getGuest($email);
+        $data['guests'] = $model->getGuests($email);
 
-    if (empty($data['guest'])) {
-        throw new PageNotFoundException('Cannot find the guest item: ' . $email);
+        if (empty($data['guests'])) {
+            throw new PageNotFoundException('Cannot find the guest item: ' . $email);
+        }
+
+        $data['title'] = $data['guests']['name'];
+
+        return view('templates/guestheader', $data)
+            . view('guests/view')
+            . view('templates/guestfooter');
     }
 
-    // Check if the 'title' key exists before accessing it
-    $data['title'] = isset($data['guest']['title']) ? $data['guest']['title'] : 'Default Title';
-
-    return view('templates/guestheader', $data)
-        . view('guests/view')
-        . view('templates/guestfooter');
-    }
-    public function new()
+public function new()
     {
         helper('form');
 
@@ -55,8 +59,9 @@ class Guests extends BaseController
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($data, [
             'name' => 'required|max_length[255]|min_length[3]',
-            'email' => 'required|max_length[255]|min_length[3]',
-            'comments'  => 'required|max_length[5000]|min_length[10]',
+            'email'  => 'required|max_length[255]|min_length[5]',
+            'comment'  => 'required|max_length[5500]|min_length[10]',
+
         ])) {
             // The validation fails, so returns the form.
             return $this->new();
@@ -69,12 +74,18 @@ class Guests extends BaseController
 
         $model->save([
             'name' => $post['name'],
-            'email'  => url_title($post['title'], '-', true),
-            'comments'  => $post['comments'],
+            'email'  => $post['email'],
+            'comment'  => $post['comment'],
+
+
         ]);
 
         return view('templates/guestheader', ['title' => 'Create a guest item'])
             . view('guests/success')
             . view('templates/guestfooter');
     }
+
+
+
+
 }

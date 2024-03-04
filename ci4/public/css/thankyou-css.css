@@ -10,7 +10,6 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
-    min-height: 300vh;
     cursor: url("../images/cursor.webp"), auto;
 }
 
@@ -52,55 +51,6 @@ body {
     100% {
         opacity: 0;
         visibility: hidden;
-    }
-}
-
-/* Parallax Scroll */
-
-.parallax {
-    position: relative;
-    z-index: 0;
-    display: grid;
-    grid-template-areas: "stack";
-}
-
-.parallax>* {
-    grid-area: stack;
-    animation: parallax linear;
-    animation-timeline: scroll();
-}
-
-.parallax>img {
-    width: 100%;
-}
-
-.parallax_bg {
-    --parallax-speed: -1;
-    z-index: 1;
-    min-height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.parallax_furina {
-    --parallax-speed: 5;
-    z-index: 2;
-}
-
-.parallax_adventure {
-    --parallax-speed: 2;
-    z-index: 3;
-}
-
-.parallax_front {
-    z-index: 999;
-    align-self: end;
-}
-
-@keyframes parallax {
-    to {
-        transform:
-            translateY(calc(var(--parallax-speed) * 200px));
     }
 }
 
@@ -196,62 +146,19 @@ div#right img:hover {
     cursor: url("../images/hover.webp"), auto;
 }
 
-/* Main Content */
-
-.main-content {
-    position: relative;
-    background: #7D93D6;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wrapper img {
-    width: 100%;
-}
-
-#button1 {
-    z-index: 1;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: url("../images/hover.webp"), auto;
-}
-
-#button2 {
-    z-index: 1;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: url("../images/hover.webp"), auto;
-}
-
-#image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.stack {
+.parallax {
     position: relative;
     z-index: 0;
     display: grid;
     grid-template-areas: "stack";
 }
 
-.stack>* {
+.parallax>* {
     grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    position: relative;
+.parallax>img {
+    width: 100%;
 }

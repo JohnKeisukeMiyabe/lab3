@@ -52,6 +52,12 @@
           ?>
           <p>Interests</p>
         </a>
+        <a id="teleportwaypoint" href="guests">
+          <?php
+          echo img('images/teleportwaypoint.png');
+          ?>
+          <p>Guest</p>
+        </a>
       </div>
       <div id="statueoftheseven">
         <a href="home">
@@ -70,13 +76,19 @@
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
-          <p>Steambird</p>
+          <p>News</p>
         </a>
         <a id="teleportwaypoint" href="resources">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>Resources</p>
+        </a>
+        <a id="teleportwaypoint" href="thankyou">
+          <?php
+          echo img('images/teleportwaypoint.png');
+          ?>
+          <p>Thank you</p>
         </a>
       </div>
     </div>

@@ -1,5 +1,5 @@
   <?php
-  echo link_tag('css/steambird-css.css');
+  echo link_tag('css/guests-news-css.css');
 
   $script = [
     'defer' => null,
@@ -47,6 +47,12 @@
           ?>
           <p>Interests</p>
         </a>
+        <a id="teleportwaypoint" href="guests">
+          <?php
+          echo img('images/teleportwaypoint.png');
+          ?>
+          <p>Guest</p>
+        </a>
       </div>
       <div id="statueoftheseven">
         <a href="home">
@@ -65,13 +71,19 @@
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
-          <p>Steambird</p>
+          <p>News</p>
         </a>
         <a id="teleportwaypoint" href="resources">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>Resources</p>
+        </a>
+        <a id="teleportwaypoint" href="thankyou">
+          <?php
+          echo img('images/teleportwaypoint.png');
+          ?>
+          <p>Thank you</p>
         </a>
       </div>
     </div>
@@ -107,7 +119,7 @@
 
   <div class="main-content">
     <div class="wrapper">
-<?= esc($title) ?>
+<div class="h"><?= esc($title) ?> </div>
 
 <?php if (! empty($news) && is_array($news)): ?>
 

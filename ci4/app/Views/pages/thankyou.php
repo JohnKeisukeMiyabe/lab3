@@ -1,15 +1,20 @@
-<?php
-  echo link_tag('css/guests-news-css.css');
+  <?php
+  echo link_tag('css/thankyou-css.css');
 
-  $script = [
+  $preloaderscript = [
     'defer' => null,
     'src' => 'js/pre-loader.js', 
   ];
 
-  echo script_tag($script);
-  ?>
+  $profilescript = [
+    'defer' => null,
+    'src' => 'js/profile.js', 
+  ];
 
-  <audio autoplay loop id="audiobox" style="width:215px;">
+  echo script_tag($preloaderscript);
+  echo script_tag($profilescript);
+  ?>
+<audio autoplay loop id="audiobox" style="width:215px;">
     <source src="audio/test.mp3" type="audio/mpeg">
   </audio>
 </head>
@@ -27,11 +32,8 @@
     </div>
   </div>
 
-  <!-- Parallax Scrolling -->
-
-  <div class="parallax">
-
     <!-- Navigation Bar -->
+<div class="parallax">
 
     <div id="waypoints">
       <div id="left">
@@ -88,60 +90,7 @@
       </div>
     </div>
 
-    <?php
-    $bg = [
-      'class' => 'parallax_bg',
-      'src' => 'images/steambird/parallax/steambird.png',
-    ];
-
-    $front = [
-      'class' => 'parallax_front',
-      'src' => 'images/steambird/parallax/fron.png',
-    ];
-
-    $adventure = [
-      'class' => 'parallax_adventure',
-      'src' => 'images/steambird/parallax/message.png',
-    ];
-
-    $charlotte = [
-      'class' => 'parallax_charlotte',
-      'src' => 'images/steambird/parallax/charlotte.png',
-    ];
-
-    echo img($bg);
-    echo img($front);
-    echo img($adventure);
-    echo img($charlotte);
-    ?>
-</div>
-
-<div class="main-content">
-    <div class="wrapper">
-        <a id="center" href="guests/new">Want to put your message Traveler? Click Here</a></div>
-<div class="h"><?= esc($title) ?></div>
-
-<?php if (! empty($guests) && is_array($guests)): ?>
-
-    <?php foreach ($guests as $guests_item): ?>
-
-        <h3><?= esc($guests_item['name']) ?></h3>
-
-        <div class="main">
-            <?= esc($guests_item['email']) ?>
-            <br>
-            <?= esc($guests_item['comment']) ?>
-        </div>
-        <p><a href="./guests/<?= esc($guests_item['email'], 'url') ?>">View Guest detail</a></p>
-
-    <?php endforeach ?>
-
-<?php else: ?>
-
-    <h3>No Guests</h3>
-
-    <p>Unable to find any guest for you.</p>
-
-<?php endif ?>
-</div>
+    <video autoplay muted loop id="furina">
+    <source src="video/thank you page.mp4" type="video/mp4">
+    </video>
 </div>
