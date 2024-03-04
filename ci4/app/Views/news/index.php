@@ -101,12 +101,12 @@
 
     $adventure = [
       'class' => 'parallax_adventure',
-      'src' => 'images/steambird/parallax/message.png',
+      'src' => 'images/steambird/parallax/news.png',
     ];
 
     $charlotte = [
       'class' => 'parallax_charlotte',
-      'src' => 'images/steambird/parallax/charlotte.png',
+      'src' => 'images/steambird/parallax/charlottenews.png',
     ];
 
     echo img($bg);
