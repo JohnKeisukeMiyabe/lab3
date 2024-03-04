@@ -27,8 +27,6 @@
     </div>
   </div>
 
-  <!-- Parallax Scrolling -->
-
     <!-- Navigation Bar -->
 
     <div id="waypoints">

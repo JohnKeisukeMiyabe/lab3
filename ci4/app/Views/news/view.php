@@ -33,19 +33,19 @@
 
     <div id="waypoints">
       <div id="left">
-        <a id="teleportwaypoint" href="profile">
+        <a id="teleportwaypoint" href="../profile">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>Profile</p>
         </a>
-        <a id="teleportwaypoint" href="interests">
+        <a id="teleportwaypoint" href="../interests">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>Interests</p>
         </a>
-        <a id="teleportwaypoint" href="guests">
+        <a id="teleportwaypoint" href="../guests">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
@@ -53,7 +53,7 @@
         </a>
       </div>
       <div id="statueoftheseven">
-        <a href="home">
+        <a href="../home">
           <?php
           $statue = [
             'id' => 'newstatueoftheseven',
@@ -65,19 +65,19 @@
         </a>
       </div>
       <div id="right">
-        <a id="teleportwaypoint" href="news">
+        <a id="teleportwaypoint" href="../news">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>News</p>
         </a>
-        <a id="teleportwaypoint" href="resources">
+        <a id="teleportwaypoint" href="../resources">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
           <p>Resources</p>
         </a>
-        <a id="teleportwaypoint" href="thankyou">
+        <a id="teleportwaypoint" href="../thankyou">
           <?php
           echo img('images/teleportwaypoint.png');
           ?>
