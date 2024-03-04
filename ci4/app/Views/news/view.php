@@ -1,3 +1,19 @@
+<?php
+  echo link_tag('css/create-css.css');
+
+  $script = [
+    'defer' => null,
+    'src' => 'js/pre-loader.js', 
+  ];
+
+  echo script_tag($script);
+  ?>
+
+  <audio autoplay loop id="audiobox" style="width:215px;">
+    <source src="../audio/test.mp3" type="audio/mpeg">
+  </audio>
+</head>
+<body>
 <!-- Loading Screen -->
 
 <div class="loader">
@@ -71,3 +87,4 @@
     </div>
 <h2><?= esc($news['title']) ?></h2>
 <p><?= esc($news['body']) ?></p>
+        </body>
