@@ -119,6 +119,7 @@
 
   <div class="main-content">
     <div class="wrapper">
+    <a id="center" href="guests/new">Want to put your news Traveler? Click Here</a></div>
 <div class="h"><?= esc($title) ?> </div>
 
 <?php if (! empty($news) && is_array($news)): ?>
