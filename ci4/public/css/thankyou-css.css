@@ -162,3 +162,7 @@ div#right img:hover {
 .parallax>img {
     width: 100%;
 }
+
+img {
+    width: 100%;
+}

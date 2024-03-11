@@ -90,5 +90,5 @@
       </div>
     </div>
 
-    <img src="Thank you page.png">
+    <img src="images/Thank you page.png">
 </div>
