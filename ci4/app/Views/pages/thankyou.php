@@ -90,7 +90,5 @@
       </div>
     </div>
 
-    <video autoplay muted loop id="furina">
-    <source src="video/thank you page.mp4" type="video/mp4">
-    </video>
+    <img src="Thank you page.png">
 </div>
