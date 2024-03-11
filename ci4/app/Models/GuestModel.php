@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class GuestModel extends Model
 {
-    protected $table = 'myguests';
+    protected $table = 'jmmiyabe_myguests';
     protected $allowedFields = ['name', 'email', 'comment'];
 
 
